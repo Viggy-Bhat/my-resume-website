@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00c6ff;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #dcdcdc;
+      max-width: 600px;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border: none;
+      border-radius: 25px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 80px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 50px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #dcdcdc;
+    }
+
+    footer a {
+      color: #00c6ff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hello, I'm  <span style="color:#00c6ff">Vignesh</span></h2>
+    <p>A passionate Web Developer skilled in building modern, responsive, and creative websites using HTML, CSS, and JavaScript.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+  </section>
+
+  <section id="skills">
+    <h3 class="section-title">My Skills</h3>
+    <div class="skills">
+      <div class="card">HTML5 & CSS3</div>
+      <div class="card">JavaScript & React</div>
+      <div class="card">Node.js & Express</div>
+      <div class="card">MongoDB & SQL</div>
+      <div class="card">Python & Flask</div>
+      <div class="card">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h3 class="section-title">Projects</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>Portfolio Website</h4>
+        <p>A responsive portfolio website with smooth animations and elegant gradients.</p>
+      </div>
+      <div class="card">
+        <h4>Task Manager App</h4>
+        <p>Full-stack CRUD app built using MERN stack for productivity management.</p>
+      </div>
+      <div class="card">
+        <h4>AI Chat Assistant</h4>
+        <p>Python Flask-based chatbot integrating with GPT APIs for intelligent conversations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3 class="section-title">Contact Me</h3>
+    <div style="text-align:center">
+      <p>📧 Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p>🌐 GitHub: <a href="https://github.com/Viggy-Bhat" target="_blank">github.com</a></p>
+      <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/vignesh-bhat-359522355/" target="_blank">linkedin.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025  Vignesh | Built with ❤️ using HTML, CSS, and JS</p>
+  </footer>
+
+  <script>
+    // Smooth Scroll for Nav Links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
